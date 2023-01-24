@@ -24,18 +24,74 @@ export default function Home() {
       >
         <div style={{ width: '100%' }}>
           <h1 className="text-2xl font-bold text-gray-700 pb-2">
-            Shakespearean <code className="text-md">{'<SmartInput>'}</code>
+            <code>foundation/shakespeare</code>
           </h1>
+          <p>
+            Autocomplete in the style of <b>William Shakespeare</b>
+          </p>
           <SmartInput
             model="foundation/shakespeare"
             className="border border-slate-500 rounded-md p-1 hover:border-sky-500 focus:border-sky-500"
-            placeholder="Start composing a sonnet..."
+            placeholder="Shall I compare thee..."
             renderText={(props: any) => <span className="text-gray-600/100" {...props} />}
             renderCompletion={(props: any) => <span className="text-gray-600/40" {...props} />}
             renderPlaceholder={(props: any) => <span className="text-gray-600/40" {...props} />}
             value={value}
             onChange={setValue}
             multiline={true}
+          />
+          <h1 className="text-2xl font-bold text-gray-700 pt-12 pb-2">
+            <code>foundation/hn-comment</code>
+          </h1>
+          <p>
+            Autocomplete <b>Hacker News comments</b>.
+          </p>
+          <SmartInput
+            model="foundation/hn-comment"
+            className="border border-slate-500 rounded-md p-1 hover:border-sky-500 focus:border-sky-500"
+            placeholder="Leave a comment...."
+            renderText={(props: any) => <span className="text-gray-600/100" {...props} />}
+            renderCompletion={(props: any) => <span className="text-gray-600/40" {...props} />}
+            renderPlaceholder={(props: any) => <span className="text-gray-600/40" {...props} />}
+            value={value}
+            onChange={setValue}
+            multiline={true}
+          />
+          <h1 className="text-2xl font-bold text-gray-700 pt-12 pb-2">
+            <code>foundation/amazon-review</code>
+          </h1>
+          <p>
+            Autocomplete <b>Amazon product reviews</b>.
+          </p>
+          <SmartInput
+            model="foundation/amazon-review"
+            className="border border-slate-500 rounded-md p-1  focus:border-sky-500"
+            placeholder="Coming soon!"
+            disabled
+            renderText={(props: any) => <span className="text-gray-600/100" {...props} />}
+            renderCompletion={(props: any) => <span className="text-gray-600/40" {...props} />}
+            renderPlaceholder={(props: any) => <span className="text-gray-600/30" {...props} />}
+            value={value}
+            onChange={setValue}
+            multiline={true}
+          />
+          <h1 className="text-2xl font-bold text-gray-700 pt-12 pb-2">
+            <code>foundation/onion-headline</code>
+          </h1>
+          <p>
+            Autocomplete headlines in the style of <b>The Onion®</b>.
+          </p>
+          <SmartInput
+            model="foundation/amazon-review"
+            className="border border-slate-500 rounded-md p-1  focus:border-sky-500"
+            placeholder="Coming soon!"
+            disabled
+            renderText={(props: any) => <span className="text-gray-600/100" {...props} />}
+            renderCompletion={(props: any) => <span className="text-gray-600/40" {...props} />}
+            renderPlaceholder={(props: any) => <span className="text-gray-600/30" {...props} />}
+            value={value}
+            onChange={setValue}
+            multiline={false}
           />
           <div className="pt-24">
             <h2 className="text-xl font-bold text-gray-600 pb-2">Add it to your site:</h2>
