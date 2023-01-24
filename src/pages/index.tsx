@@ -1,10 +1,9 @@
-import Head from "next/head";
-import React from "react";
-import { Inter } from "@next/font/google";
-import { SmartInput } from "@foundationui/smart-input";
+import { SmartInput } from '@foundationui/smart-input'
+import Head from 'next/head'
+import React from 'react'
 
 export default function Home() {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState('')
   return (
     <>
       <Head>
@@ -15,37 +14,53 @@ export default function Home() {
       </Head>
       <main
         style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "6rem",
-          minHeight: "100vh",
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          padding: '6rem',
+          minHeight: '100vh',
         }}
       >
-        <div style={{ width: "100%" }}>
+        <div style={{ width: '100%' }}>
           <h1 className="text-2xl font-bold text-gray-700 pb-2">
-            Shakespearean <code className="text-md">{"<SmartInput>"}</code>
+            Shakespearean <code className="text-md">{'<SmartInput>'}</code>
           </h1>
           <SmartInput
             model="foundation/shakespeare"
             className="border border-slate-500 rounded-md p-1 hover:border-sky-500 focus:border-sky-500"
             placeholder="Start composing a sonnet..."
-            renderText={(props: any) => (
-              <span className="text-gray-600/100" {...props} />
-            )}
-            renderCompletion={(props: any) => (
-              <span className="text-gray-600/40" {...props} />
-            )}
-            renderPlaceholder={(props: any) => (
-              <span className="text-gray-600/40" {...props} />
-            )}
+            renderText={(props: any) => <span className="text-gray-600/100" {...props} />}
+            renderCompletion={(props: any) => <span className="text-gray-600/40" {...props} />}
+            renderPlaceholder={(props: any) => <span className="text-gray-600/40" {...props} />}
             value={value}
             onChange={setValue}
             multiline={true}
           />
+          <div className="pt-24">
+            <h2 className="text-xl font-bold text-gray-600 pb-2">Add it to your site:</h2>
+            <ol>
+              <li>
+                1. Create an account on{' '}
+                <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://app.foundation-ui.com">
+                  foundation.com
+                </a>
+              </li>
+              <li>2. Create a new repository and add some data</li>
+              <li>
+                3. Add{' '}
+                <a
+                  className="text-blue-600 dark:text-blue-500 hover:underline"
+                  href="https://www.npmjs.com/package/@foundationui/smart-input"
+                >
+                  <code>{'<SmartInput'}</code>
+                </a>{' '}
+                to your React app in <code>safeMode</code>
+              </li>
+            </ol>
+          </div>
         </div>
       </main>
     </>
-  );
+  )
 }
