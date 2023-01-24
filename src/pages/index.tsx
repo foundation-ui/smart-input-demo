@@ -43,7 +43,7 @@ export default function Home() {
               <li>
                 1. Create an account on{' '}
                 <a className="text-blue-600 dark:text-blue-500 hover:underline" href="https://app.foundation-ui.com">
-                  foundation.com
+                  foundation-ui.com
                 </a>
               </li>
               <li>2. Create a new repository and add some data</li>
